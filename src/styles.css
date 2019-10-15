@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+	background-color: #f7fbff;
+	border-top: 2px solid #5f5b5b;
+	font-family: 'open-sans,sans-serif';
+}
+
+h3 {
+	color: #354052;
+	/* font-style: italic; */
+	letter-spacing: 1px;
+	/* text-decoration: underline; */
+}

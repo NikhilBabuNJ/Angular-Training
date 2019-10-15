@@ -1,0 +1,29 @@
+
+
+.activeLink {
+    color: white;
+}
+
+
+.custom-list-item {
+    margin-right: 30px;
+    font-size: 15px;
+    margin-top: 2px;
+    /* color: black; */
+}
+
+
+/* .custom-link{
+    color: black;
+} */
+
+
+/* .custom-list-item a {
+    color: black;
+} */
+
+
+a:hover{
+    cursor: pointer;
+    text-decoration:underline;
+}

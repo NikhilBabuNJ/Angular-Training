@@ -1,0 +1,90 @@
+<div class="container-fluid">
+    <hr>
+    <div class="row">
+        <h3>mangeusers component loaded....</h3>
+    </div>
+    <hr>
+    <div class="row">
+        <h3>Data Binding:</h3>
+    </div>
+    <hr>
+    <div class="row">
+        <h6>String interpolation:</h6>
+        <strong>{{getUserFullName()}}</strong>
+    </div>
+    <hr>
+    <div class="row">
+        <button class="btn btn-sm btn-info" (click)="onToggle($event)">Toggle</button>
+    </div>
+    <hr>
+    <div class="row">
+        <span>
+            <h6>Property binding:</h6>
+            <button class="btn btn-sm btn-info" [disabled]="isSubmitBtn">Submit User Details</button>
+        </span>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-5">
+            <h6>Two way binding</h6>
+            <input class="form-control" #username type="text" [(ngModel)]="userName" (input)="onUserNameChange()" />
+        </div>
+
+        <!-- {{userName}} -->
+    </div>
+    <hr>
+    <div class="row">
+        <span>
+            <h6> Custom property binding value from parent</h6>
+            Name : {{userInfo}} Age: {{userAge}}
+        </span>
+    </div>
+    <hr>
+    <h5>ngcontent:</h5>
+    <div class="row">
+        <ng-content select="header"></ng-content>
+    </div>
+    <div class="row">
+        <!-- <h4>body</h4>    -->
+        <ng-content select="content"></ng-content>
+    </div>
+    <hr>
+    <h5>Attribute directives</h5>
+    <div class="row">
+        <strong [ngStyle]="{backgroundColor:isSubmitBtn?'blue':'yellow'}">I am styled using ngStyle</strong>
+    </div>
+    <!-- [ngClass]="{backgroundYellow: isSubmitBtn:'backgroundGreen'}" -->
+    <div class="row">
+        <strong [ngClass]="{'backgroundYellow':isSubmitBtn,'backgroundGreen':!isSubmitBtn}">I am styled using ngClass</strong>
+    </div>
+    <h5>Structural directives</h5>
+    <div class="row" *ngIf="isSubmitBtn">
+        <strong>I am ngIf directive content</strong>
+    </div>
+
+    <hr>
+    <div class="row">
+        <strong>I am ngFor directive content</strong>
+        <br>
+        <br>
+        <div class="col-md-12">
+            <ul class="list-group">
+                <li class="list-item" *ngFor="let fruit of fruits;let i = index">
+                    <strong>Name: {{fruit.name}}; </strong>
+                    <strong>Price: {{fruit.price}}; </strong>
+                    <strong>Color: {{fruit.color}}; </strong>
+                    <strong>OrderId: {{i + 1}}; </strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row" [ngSwitch]="isSubmitBtn">
+        <strong>I am ngSwitch directive content</strong>
+        <strong *ngSwitchCase="true"> I am true</strong>
+        <strong *ngSwitchCase="false"> I am false</strong>
+        <strong *ngSwitchDefault> I am default</strong>
+
+        <!-- <strong *ngSwitchCase=""></strong> -->
+    </div>
+</div>

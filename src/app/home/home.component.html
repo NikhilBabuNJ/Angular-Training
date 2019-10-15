@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-sm  navbar-light" style="background-color:#459c93;">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" [routerLink]="['']">
+        <img src="../../assets/angular-icon.png" alt="logo" style="width: 24px;
+        /* height: 20px; */
+        margin-top: -6px;">
+        <!-- <strong>Logo</strong> -->
+    </a>
+
+    <!-- Links -->
+    <ul class="navbar-nav">
+        <li class="nav-item custom-list-item">
+            <!-- normal way -->
+            <!-- <a class="nav-link" href="/user-info">Users Info</a> -->
+            <!-- normal -->
+            <!-- <a [routerLink]="['/user-info',id]"  routerLinkActive="activeLink" [queryParams]="{'userName':'nikhil','age':25}" [fragment]="'sayHi'">Users Info</a> -->
+
+            <!-- <progrmatic -->
+
+            <a (click)="routeTo('user')">Users Info</a>
+        </li>
+        <li class="nav-item custom-list-item">
+            <!-- <a  [routerLink]="['/manage-users']" routerLinkActive="activeLink">Manage Users</a> -->
+
+            <a (click)="routeTo('manage')" appColor>Manage Users</a>
+
+        </li>
+        <li class="nav-item custom-list-item">
+            <a (click)="routeTo('fruits')" routerLinkActive="activeLink">Fruits</a>
+            <!-- custom directives -->
+            <!-- <a (click)="routeTo('fruits')">{{'Fruits componentmasndmhasmhdasdjhasdhjalhsdjhajsdh' | limitStringValues:4:10 }}</a>   
+                          -->
+        </li>
+        <li class="nav-item custom-list-item">
+            <a (click)="routeTo('tempalteDrivenForms')" routerLinkActive="activeLink">Template driven forms</a>
+
+        </li>
+        <li class="nav-item custom-list-item">
+            <a (click)="routeTo('reactiveForms')" routerLinkActive="activeLink">Reactive forms</a>
+
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+        </li> -->
+    </ul>
+</nav>

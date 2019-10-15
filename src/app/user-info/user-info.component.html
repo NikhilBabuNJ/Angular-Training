@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <hr>
+    <h3>Userinfo component loaded.....</h3>
+    <div class="row user">
+        <span>
+            <!-- <h6></h6> -->
+            <strong>Custom event binding (data from child component on toggle btn click):</strong>
+            {{userData}}
+        </span>
+    </div>
+    <br>
+    <div class="row">
+        <button class="btn btn-info" (click)="onModalToggle()">Modal Window</button>
+    </div>
+    <app-manage-users [userAge]="userAge" [userInformation]="userName" (mangeUser)="onManageuser($event)" (userNativePlace)="getNativePlace($event)">
+       <div #childContent class="row">
+            <strong> Iam ngContent....</strong>
+            <header>Iam ngcontent header....</header>
+            <content>Iam ngcontent content here......</content>
+       </div>
+    </app-manage-users>
+</div>
+
+
+<app-modal-window [isModalWindow]="isModalWindow" (isModalClosed)="onModalClose($event)"></app-modal-window>

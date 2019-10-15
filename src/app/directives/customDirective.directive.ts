@@ -10,6 +10,8 @@ import { Directive, HostBinding, HostListener } from '@angular/core';
 export class CustomColorDirective {
 
 // i added the new line for git commit
+  
+  // new code added here
 
     @HostBinding('style.backgroundColor') backgroundColor;
 
